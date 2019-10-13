@@ -7,40 +7,73 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseDatabase
 
-class patientInfoViewController: UIViewController {
+class patientInfoViewController: UIViewController,UITextFieldDelegate {
 
     
 
+    @IBOutlet weak var callerName: UITextField!
     @IBOutlet weak var callerPhoneNumber: UITextField!
   
-    @IBOutlet weak var callerName: UILabel!
     var ref:DatabaseReference!
-    
-    
+    var info = PatientInfoModel()
     
     
     
       override func viewDidLoad() {
         super.viewDidLoad()
        
+        callerName.delegate = self
+        callerPhoneNumber.delegate = self
         ref = Database.database().reference()
         retrievedata()
+        
         // Do any additional setup after loading the view.
       }
 
     
     func retrievedata()
     {
-        ref.child("ambulance1").child("caller details").observe(.childAdded) { (snapshot) in
-            
-            let snapshotValue = snapshot.value as! Dictionary<String,String>
-            
-        }
         
+        let  callerDB = ref.child("database").child("ambulance1").child("caller details")
+               
+        callerDB.observe(.value) { (snapshot) in
+                   
+            let snapshotValue = snapshot.value as? [String: AnyObject]
+            print(snapshotValue)
+            
+            if let name = snapshotValue?["name"]
+            {
+                print(name)
+                self.callerName.text = name as! String
+            }
+            if let phone = snapshotValue?["phone number"]
+            {
+                print(phone)
+                self.callerPhoneNumber.text  = phone as! String
+            }
+            if let xlocation = snapshotValue?["xlocation"]
+            {
+                self.info.xLocation = xlocation as! String
+            }
+            if let ylocation = snapshotValue?["ylocation"]
+            {
+                self.info.yLocation = ylocation
+                    as! String            }
+                
+           }
+        print(self.info.callerName)
+//        setData()
     }
-    
+//
+//    func setData() {
+//
+//        print(info.callerName)
+//        print(info.callerPhone)
+//        self.callerName.text = info.callerName
+//        self.callerPhoneNumber.text = info.callerPhone
+//    }
     
   /*
     func db(database: String)
