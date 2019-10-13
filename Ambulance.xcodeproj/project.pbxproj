@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		338FB7922352F0A7005B7D39 /* PatientInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338FB7912352F0A7005B7D39 /* PatientInfoModel.swift */; };
 		BA8C09D423522E2100788AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C09D323522E2100788AE7 /* AppDelegate.swift */; };
 		BA8C09D623522E2100788AE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C09D523522E2100788AE7 /* ViewController.swift */; };
 		BA8C09D923522E2100788AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8C09D723522E2100788AE7 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		16277CD918924AAD9B826BA7 /* Pods-Ambulance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ambulance.debug.xcconfig"; path = "Target Support Files/Pods-Ambulance/Pods-Ambulance.debug.xcconfig"; sourceTree = "<group>"; };
+		338FB7912352F0A7005B7D39 /* PatientInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfoModel.swift; sourceTree = "<group>"; };
 		A52484F2AA87DF056EA5AA16 /* Pods_Ambulance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ambulance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8C09D023522E2100788AE7 /* Ambulance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambulance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8C09D323522E2100788AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				BA8C0A0D23528C7900788AE7 /* map2ViewController.swift */,
 				BA8C0A0923527D3000788AE7 /* MapViewController.swift */,
 				BA8C09DF23522E2300788AE7 /* Info.plist */,
+				338FB7912352F0A7005B7D39 /* PatientInfoModel.swift */,
 			);
 			path = Ambulance;
 			sourceTree = "<group>";
@@ -205,24 +208,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ambulance/Pods-Ambulance-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Ambulance/Pods-Ambulance-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Ambulance/Pods-Ambulance-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -242,6 +232,7 @@
 				BA8C09D423522E2100788AE7 /* AppDelegate.swift in Sources */,
 				BA8C0A0E23528C7900788AE7 /* map2ViewController.swift in Sources */,
 				BA8C0A0A23527D3000788AE7 /* MapViewController.swift in Sources */,
+				338FB7922352F0A7005B7D39 /* PatientInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
